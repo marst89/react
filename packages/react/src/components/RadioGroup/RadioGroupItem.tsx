@@ -106,7 +106,7 @@ class RadioGroupItem extends AutoControlledComponent<
     checked: PropTypes.bool,
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
-    icon: customPropTypes.itemShorthand,
+    icon: customPropTypes.primitiveShorthand,
     label: customPropTypes.itemShorthand,
     name: PropTypes.string,
     onBlur: PropTypes.func,

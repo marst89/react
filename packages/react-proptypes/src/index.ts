@@ -413,6 +413,15 @@ export const itemShorthandWithKindProp = (kindPropValues: string[]) => {
 }
 
 /**
+ * Primitve Item shorthand is a description of a component that can be a literal,
+ * a props object or a render function.
+ */
+export const primitiveShorthand = every([
+  disallow(['children']),
+  PropTypes.oneOfType([PropTypes.func, PropTypes.number, PropTypes.object, PropTypes.string]),
+])
+
+/**
  * Collection shorthand ensures a prop is an array of item shorthand.
  */
 export const collectionShorthand = every([disallow(['children']), PropTypes.arrayOf(itemShorthand)])
