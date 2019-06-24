@@ -19,16 +19,10 @@ import { inputBehavior } from '../../lib/accessibility'
 import { WithAsProp, ShorthandValue, ComponentEventHandler, withSafeTypeForAs } from '../../types'
 import Icon from '../Icon/Icon'
 import Box from '../Box/Box'
-import { HtmlInputProps } from '../../lib/htmlPropsUtils'
+import { SupportedIntrinsicInputProps } from '../../lib/htmlPropsUtils'
 
 export interface InputSlotClassNames {
   input: string
-}
-
-type SupportedIntrinsicInputProps = {
-  [K in HtmlInputProps]?: K extends keyof JSX.IntrinsicElements['input']
-    ? JSX.IntrinsicElements['input'][K]
-    : any
 }
 
 export interface InputProps
